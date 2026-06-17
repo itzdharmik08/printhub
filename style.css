@@ -1,0 +1,1463 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Architects+Daughter&family=Caveat:wght@700&display=swap');
+
+:root {
+    --bg-color: #f6f5ff;
+    --primary: #611fdb;
+    --primary-hover: #4d14b8;
+    --pink: #e60067;
+    --pink-hover: #c90059;
+    --blue: #0d6efd;
+    --dark: #000000;
+    --light: #ffffff;
+    --tape-color: rgba(245, 245, 240, 0.82);
+    --border-width: 3px;
+    --border-radius-sm: 4px;
+    
+    /* Neobrutalist Shadow styles */
+    --shadow-black: 4px 4px 0px 0px var(--dark);
+    --shadow-black-lg: 8px 8px 0px 0px var(--dark);
+    --shadow-pink: 12px 12px 0px 0px var(--pink);
+    --shadow-blue: 12px 12px 0px 0px var(--blue);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* Page Wrapper with Purple Frame Border */
+.page-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    border: 8px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Background Grid Overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#a29df5 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    opacity: 0.75;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Glowing Background Blobs */
+.glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.55;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.blob-top-left {
+    top: 12%;
+    left: 8%;
+    width: 150px;
+    height: 150px;
+    background-color: var(--pink);
+}
+
+.blob-bottom-right {
+    bottom: 12%;
+    right: 15%;
+    width: 180px;
+    height: 180px;
+    background-color: var(--primary);
+}
+
+/* Floating Tape Left */
+.floating-tape-left {
+    position: absolute;
+    top: 25%;
+    left: 4%;
+    width: 120px;
+    height: 38px;
+    background-color: var(--tape-color);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transform: rotate(-12deg);
+    z-index: 2;
+    clip-path: polygon(
+        0% 12%, 8% 0%, 93% 2%, 100% 15%, 
+        97% 48%, 100% 88%, 91% 100%, 7% 98%, 
+        0% 85%, 3% 45%
+    );
+    border-left: 1.5px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1.5px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* Main Header */
+.main-header {
+    position: relative;
+    width: 100%;
+    background-color: var(--light);
+    border-bottom: var(--border-width) solid var(--dark);
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: -0.04em;
+    color: var(--light);
+    -webkit-text-stroke: 1.5px var(--dark);
+    text-shadow: 2px 2px 0px var(--dark);
+    transition: transform 0.1s ease;
+}
+
+.logo:hover {
+    transform: skewX(-3deg) scale(1.02);
+}
+
+.logo-subtext {
+    margin-left: 2px;
+    font-weight: 500;
+    color: #dedede;
+}
+
+/* Nav Menu */
+.nav-menu {
+    display: flex;
+    gap: 18px;
+}
+
+/* Neobrutalist Button Styling */
+.nav-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    border-radius: var(--border-radius-sm);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0px 0px var(--dark);
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nav-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Active & Hover states */
+.nav-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--dark);
+}
+
+.nav-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--dark);
+}
+
+/* Colored nav buttons */
+.btn-pink {
+    background-color: var(--pink);
+    color: var(--light);
+}
+.btn-pink:hover {
+    background-color: var(--pink-hover);
+}
+
+.login-btn {
+    background-color: var(--light);
+}
+
+.cta-btn {
+    background-color: var(--primary);
+    color: var(--light);
+}
+.cta-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.auth-actions {
+    display: flex;
+    gap: 18px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.mobile-toggle .bar {
+    width: 100%;
+    height: 3.5px;
+    background-color: var(--dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    border-bottom: var(--border-width) solid var(--dark);
+    z-index: 3;
+}
+
+.hero-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Hero Card */
+.hero-left-card {
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 50px 45px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.hero-left-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px 0px var(--dark);
+}
+
+.main-title {
+    font-size: 4.2rem;
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+
+.text-pink {
+    color: var(--pink);
+    position: relative;
+    display: inline-block;
+    transform: rotate(-3deg) translateY(2px);
+    text-shadow: 1.5px 1.5px 0px var(--dark);
+    font-weight: 600;
+}
+
+.subtitle-text {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--dark);
+    letter-spacing: 0.02em;
+    margin-bottom: 35px;
+    max-width: 480px;
+    text-transform: uppercase;
+}
+
+/* Hero CTA Print Now Button */
+.print-now-btn {
+    font-family: 'Outfit', sans-serif;
+    padding: 16px 36px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--light);
+    background-color: var(--primary);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black);
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.print-now-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px 0px var(--dark);
+}
+
+.print-now-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--dark);
+}
+
+/* Right Polaroid Layout */
+.hero-right-polaroids {
+    position: relative;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Polaroid Card styling */
+.polaroid-card {
+    position: absolute;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    padding: 16px 16px 24px 16px;
+    width: 290px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.polaroid-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.polaroid-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--dark);
+    overflow: hidden;
+    background-color: #eee;
+    position: relative;
+}
+
+.polaroid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.polaroid-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 1.85rem;
+    color: var(--dark);
+    margin-top: 14px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+/* Polaroid 1 (Summer '24) specifics */
+.polaroid-summer {
+    top: 5%;
+    right: 4%;
+    transform: rotate(8deg);
+    box-shadow: var(--shadow-pink);
+    z-index: 5;
+}
+
+.polaroid-summer:hover {
+    transform: rotate(4deg) scale(1.03) translate(-5px, -5px);
+    box-shadow: 16px 16px 0px 0px var(--pink);
+    z-index: 11;
+}
+
+/* Polaroid 2 (The Crew) specifics */
+.polaroid-crew {
+    bottom: 5%;
+    left: 4%;
+    transform: rotate(-9deg);
+    box-shadow: var(--shadow-blue);
+    z-index: 10;
+}
+
+.polaroid-crew .polaroid-img {
+    filter: grayscale(100%) contrast(1.1);
+}
+
+.polaroid-crew:hover {
+    transform: rotate(-4deg) scale(1.03) translate(-5px, -5px);
+    box-shadow: 16px 16px 0px 0px var(--blue);
+    z-index: 12;
+}
+
+/* Scotch Tape Elements */
+.tape {
+    position: absolute;
+    width: 85px;
+    height: 28px;
+    background-color: var(--tape-color);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    z-index: 15;
+    pointer-events: none;
+    clip-path: polygon(
+        0% 10%, 6% 0%, 94% 2%, 100% 12%, 
+        98% 46%, 100% 88%, 93% 100%, 6% 98%, 
+        0% 88%, 2% 45%
+    );
+    border-left: 1.5px dashed rgba(0, 0, 0, 0.12);
+    border-right: 1.5px dashed rgba(0, 0, 0, 0.12);
+}
+
+/* Tape positions */
+.tape-top {
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.tape-top-left {
+    top: -12px;
+    left: -12px;
+    transform: rotate(-35deg);
+}
+
+.tape-bottom-right {
+    bottom: -12px;
+    right: -12px;
+    transform: rotate(-40deg);
+}
+
+
+/* ==========================================================
+   How It Works Section
+   ========================================================== */
+.how-it-works {
+    position: relative;
+    background-color: #e2e4e9;
+    border-bottom: var(--border-width) solid var(--dark);
+    padding: 60px 40px 80px 40px;
+    z-index: 3;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin-bottom: 50px;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Step Cards */
+.step-card {
+    position: relative;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 40px 30px;
+    width: 330px;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.step-card:hover {
+    transform: scale(1.02) translate(-4px, -4px);
+    box-shadow: 12px 12px 0px 0px var(--dark);
+}
+
+.card-tilt-left {
+    transform: rotate(-1.5deg);
+}
+
+.card-tilt-right {
+    transform: rotate(2deg);
+}
+
+/* Overlapping Badge */
+.step-number {
+    position: absolute;
+    top: -22px;
+    left: -22px;
+    width: 44px;
+    height: 44px;
+    background-color: #2b1263; /* Dark purple */
+    border: var(--border-width) solid var(--dark);
+    color: var(--light);
+    font-size: 1.35rem;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 0px 0px var(--dark);
+    z-index: 10;
+}
+
+.step-icon {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.step-desc {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* Step 2 (Pink Background) Specifics */
+.step-pink {
+    background-color: var(--pink);
+    color: var(--light);
+}
+
+.step-pink .step-title,
+.step-pink .step-desc {
+    color: var(--light);
+}
+
+.step-pink .step-icon svg {
+    stroke: var(--dark);
+}
+
+
+/* ==========================================================
+   Make It Personal Section
+   ========================================================== */
+.personal-section {
+    position: relative;
+    padding: 80px 40px;
+    border-bottom: var(--border-width) solid var(--dark);
+    z-index: 3;
+}
+
+.personal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Left Column: Polaroid Stack styling */
+.personal-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+}
+
+.polaroid-stack-container {
+    position: relative;
+    width: 300px;
+    height: 370px;
+}
+
+/* Back Card 2 (Red border stack) */
+.stack-back-card-red {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    transform: rotate(-10deg) translate(-10px, 12px);
+    box-shadow: 6px 6px 0 0 var(--pink);
+    z-index: 2;
+}
+
+/* Back Card 1 (Purple border stack) */
+.stack-back-card-purple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    transform: rotate(-4deg) translate(-8px, 2px);
+    box-shadow: 6px 6px 0 0 var(--primary);
+    z-index: 3;
+}
+
+/* Front Card (Spotify Link Polaroid) */
+.stack-front-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 16px;
+    transform: rotate(5deg) translate(8px, -5px);
+    z-index: 4;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.stack-front-card:hover {
+    transform: rotate(2deg) scale(1.03) translate(3px, -8px);
+    box-shadow: 12px 12px 0 0 var(--dark);
+    z-index: 10;
+}
+
+.music-artwork-wrapper {
+    width: 100%;
+    aspect-ratio: 1.12 / 1;
+    border: 2px solid var(--dark);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Retro striped teal background */
+.teal-gradient-pattern {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #7ee8fa 0%, #80f3b9 100%);
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05) 4px,
+        transparent 4px,
+        transparent 8px
+    ), linear-gradient(135deg, #7ee8fa 0%, #80f3b9 100%);
+}
+
+.personal-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-top: 10px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.heart-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Spotify Scan bar */
+.spotify-scan-bar {
+    margin-top: 12px;
+    width: 100%;
+    background-color: #e5e7eb;
+    border: 2px solid var(--dark);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--dark);
+    box-shadow: 2px 2px 0 0 var(--dark);
+}
+
+.music-list-icon {
+    flex-shrink: 0;
+}
+
+.scan-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Right Column: Info Card */
+.personal-info-card {
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 50px 45px;
+    position: relative;
+    border-radius: var(--border-radius-sm);
+}
+
+.personal-title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+/* Yellow Highlight Box */
+.highlight-yellow {
+    background-color: #fef08a; /* Soft bright yellow */
+    border: 2.5px solid var(--dark);
+    display: inline-block;
+    padding: 2px 14px;
+    transform: rotate(-1.5deg);
+    color: var(--dark);
+    margin-left: 4px;
+    box-shadow: 2px 2px 0 0 var(--dark);
+}
+
+.personal-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #4b5563; /* Gray text */
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Features List layout */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.feature-icon-box {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-text h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   Track It Live Section
+   ========================================================== */
+.track-live {
+    position: relative;
+    background-color: var(--blue);
+    border-bottom: var(--border-width) solid var(--dark);
+    padding: 80px 40px;
+    z-index: 3;
+}
+
+.track-live-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left side Card */
+.track-card {
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 50px 45px;
+    position: relative;
+}
+
+.track-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.track-title .text-purple {
+    color: var(--primary);
+}
+
+.track-desc {
+    font-size: 1.25rem;
+    line-height: 1.45;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+/* Connect Bot Button */
+.connect-bot-btn {
+    font-family: 'Outfit', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--light);
+    background-color: #1a1a1a;
+    border: var(--border-width) solid var(--dark);
+    box-shadow: 4px 4px 0 0 var(--dark);
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.connect-bot-btn:hover {
+    background-color: var(--dark);
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px 0px var(--dark);
+}
+
+.connect-bot-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--dark);
+}
+
+.bot-icon {
+    stroke: var(--light);
+}
+
+/* Right side Telegram mockup */
+.track-live-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telegram-chat-card {
+    background-color: #f3f4f6;
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    transform: rotate(-3deg);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.telegram-chat-card:hover {
+    transform: rotate(-1deg) scale(1.02) translate(-3px, -3px);
+    box-shadow: 12px 12px 0px 0px var(--dark);
+}
+
+/* Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bot-avatar {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary);
+    border: 2px solid var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 0px 0px var(--dark);
+}
+
+.bot-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-name {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--dark);
+}
+
+.bot-status {
+    color: #10b981; /* Telegram green online */
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.chat-divider {
+    height: 2px;
+    background-color: var(--dark);
+    margin: 16px -24px;
+}
+
+/* Thread list */
+.chat-thread {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.chat-msg {
+    max-width: 85%;
+    border: 2px solid var(--dark);
+    box-shadow: 3px 3px 0px 0px var(--dark);
+    padding: 12px 16px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s ease;
+}
+
+.chat-msg.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.msg-content {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.35;
+}
+
+.msg-time {
+    font-size: 0.72rem;
+    color: #6b7280;
+    font-weight: 700;
+    margin-top: 6px;
+    display: block;
+    text-align: right;
+}
+
+/* Left (Received) message bubble */
+.msg-received {
+    align-self: flex-start;
+    background-color: var(--light);
+    border-radius: 10px 10px 10px 0px;
+}
+
+/* Right (Sent) message bubble */
+.msg-sent {
+    align-self: flex-end;
+    background-color: #ebd7ff; /* Very soft purple background */
+    border-radius: 10px 10px 0px 10px;
+}
+
+
+/* ==========================================================
+   Testimonial Section
+   ========================================================== */
+.testimonial-section {
+    position: relative;
+    padding: 100px 40px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.testimonial-card {
+    position: relative;
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 60px 70px 50px 70px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--border-radius-sm);
+    transition: transform 0.25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0px 0px var(--dark);
+}
+
+.quote-icon-container {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.testimonial-quote {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--dark);
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 35px;
+    padding-left: 20px;
+    letter-spacing: 0.01em;
+}
+
+/* User profile wrapper */
+.profile-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: var(--border-width) solid var(--dark);
+    box-shadow: 3px 3px 0 0 var(--dark);
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.profile-location {
+    font-size: 0.85rem;
+    color: #5b6271;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   Footer Section
+   ========================================================== */
+.footer-section {
+    position: relative;
+    border-top: var(--border-width) solid var(--dark);
+    padding: 80px 40px 100px 40px;
+    z-index: 3;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+}
+
+/* Left Card: Info */
+.footer-left-card {
+    background-color: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 35px;
+    width: 380px;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: -0.04em;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.footer-copy {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+/* Right Card: Links (Pink Card) */
+.footer-links-card {
+    background-color: var(--pink);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-black-lg);
+    padding: 35px;
+    border-radius: var(--border-radius-sm);
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 14px;
+}
+
+/* Link Button */
+.footer-link-btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: var(--light);
+    border: 2.5px solid var(--dark);
+    border-radius: var(--border-radius-sm);
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px 0px var(--dark);
+    transition: all 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.footer-link-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-link-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px 0px var(--dark);
+}
+
+.footer-link-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px var(--dark);
+}
+
+/* Purple modifier */
+.footer-link-btn.btn-purple {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.footer-link-btn.btn-purple:hover {
+    background-color: var(--primary-hover);
+}
+
+
+/* ==========================================================
+   Responsive Styles (Updates)
+   ========================================================== */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 80px;
+        text-align: center;
+    }
+    
+    .hero-left-card {
+        padding: 40px 30px;
+    }
+
+    .main-title {
+        font-size: 3.2rem;
+    }
+
+    .subtitle-text {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3rem;
+    }
+
+    .hero-right-polaroids {
+        height: 400px;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .polaroid-card {
+        width: 250px;
+    }
+    
+    .blob-top-left {
+        top: 25%;
+    }
+
+    /* Personal section responsive */
+    .personal-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .personal-left {
+        height: 380px;
+    }
+
+    .polaroid-stack-container {
+        width: 260px;
+        height: 320px;
+    }
+    
+    .stack-back-card-red, 
+    .stack-back-card-purple {
+        width: 100%;
+        height: 100%;
+    }
+
+    .personal-info-card {
+        padding: 40px 30px;
+    }
+
+    /* Tracking section responsive */
+    .track-live-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .telegram-chat-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Testimonial responsive */
+    .testimonial-card {
+        padding: 50px 40px 40px 40px;
+    }
+
+    .testimonial-quote {
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+
+    /* Footer responsive */
+    .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-left-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        border-width: 5px;
+    }
+    
+    .header-container {
+        padding: 15px 20px;
+    }
+
+    /* Mobile Nav */
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 74px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 74px);
+        background-color: var(--light);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: left 0.3s ease;
+        border-top: var(--border-width) solid var(--dark);
+        z-index: 90;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .auth-actions {
+        display: none;
+    }
+
+    .nav-btn {
+        width: 80%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle-text {
+        font-size: 1.15rem;
+    }
+
+    .hero-right-polaroids {
+        height: 350px;
+    }
+
+    .polaroid-card {
+        width: 200px;
+        padding: 12px 12px 18px 12px;
+    }
+    
+    .polaroid-caption {
+        font-size: 1.4rem;
+        margin-top: 8px;
+    }
+    
+    .tape {
+        width: 70px;
+        height: 22px;
+    }
+    
+    .floating-tape-left {
+        display: none;
+    }
+
+    /* Step cards mobile spacing */
+    .how-it-works {
+        padding: 50px 20px;
+    }
+    
+    .steps-container {
+        gap: 50px;
+    }
+    
+    .step-card {
+        width: 100%;
+        max-width: 340px;
+    }
+    
+    /* Personal mobile styling */
+    .personal-section {
+        padding: 50px 20px;
+    }
+    
+    .personal-title {
+        font-size: 2rem;
+    }
+
+    /* Tracking section mobile */
+    .track-live {
+        padding: 50px 20px;
+    }
+
+    .track-title {
+        font-size: 2.2rem;
+    }
+
+    .track-card {
+        padding: 40px 24px;
+    }
+
+    /* Testimonial mobile */
+    .testimonial-section {
+        padding: 60px 20px;
+    }
+
+    .testimonial-card {
+        padding: 45px 24px 35px 24px;
+    }
+
+    .quote-icon-container {
+        top: 20px;
+        left: 20px;
+    }
+
+    .testimonial-quote {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-left: 0;
+    }
+
+    /* Footer mobile */
+    .footer-section {
+        padding: 60px 20px;
+    }
+
+    .footer-links-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-right-polaroids {
+        height: 300px;
+    }
+    
+    .polaroid-card {
+        width: 170px;
+    }
+    
+    .polaroid-caption {
+        font-size: 1.25rem;
+    }
+}
