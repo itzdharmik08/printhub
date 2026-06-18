@@ -10,6 +10,13 @@
 <body>
     <!-- Main Outer Wrapper with Premium Purple Border -->
     <div class="page-wrapper">
+        <!-- Sub Header Bar -->
+        <div class="sub-header-bar">
+            <span class="sub-header-tag">NEW PLATFORM</span>
+            <span class="sub-header-text">Launching soon! Secure your spot in the early access zine queue today.</span>
+            <a href="#get-started" class="sub-header-link">Reserve Spot &rarr;</a>
+        </div>
+
         <!-- Background Grid & Glowing Blobs -->
         <div class="grid-overlay"></div>
         <div class="glow-blob blob-top-left"></div>
@@ -48,6 +55,7 @@
                 </button>
             </div>
         </header>
+
 
         <!-- Hero Section -->
         <main class="hero-section">
@@ -389,6 +397,27 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Coming Soon Screen Modal -->
+    <div class="coming-soon-modal" id="coming-soon-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-card">
+            <!-- Decorative Polaroid tape strip -->
+            <div class="tape tape-top"></div>
+            
+            <button class="modal-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <span class="modal-tag">COMING SOON</span>
+            <h2 class="modal-title">THE NEW PLATFORM</h2>
+            <p class="modal-text">We are launching our brand new digital printing platform soon! Secure your spot in the early access queue to turn pixels into physical zines.</p>
+            <a href="#get-started" class="modal-btn"><span>Get Access Now</span></a>
+        </div>
     </div>
 
     <script src="app.js"></script>

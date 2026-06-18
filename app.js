@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Coming Soon Modal Popup Interaction (4.5s delay)
+    const modal = document.getElementById('coming-soon-modal');
+    if (modal) {
+        // Wait 4.5 seconds after page load before opening the modal popup
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 4500);
+
+        const closeModal = () => {
+            modal.classList.remove('show');
+        };
+
+        // Close on clicking the 'X' button
+        const modalCloseBtn = modal.querySelector('.modal-close');
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeModal);
+        }
+
+        // Close on clicking the backdrop overlay
+        const modalOverlay = modal.querySelector('.modal-overlay');
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', closeModal);
+        }
+
+        // Close on clicking the CTA button (so the link navigation works and modal closes)
+        const modalBtn = modal.querySelector('.modal-btn');
+        if (modalBtn) {
+            modalBtn.addEventListener('click', closeModal);
+        }
+    }
+
     // Mobile navigation toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
