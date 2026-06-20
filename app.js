@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Coming Soon Modal Popup Interaction (4.5s delay)
+    // Coming Soon Modal Popup Interaction (4.5s delay, only on first visit)
     const modal = document.getElementById('coming-soon-modal');
     if (modal) {
-        // Wait 4.5 seconds after page load before opening the modal popup
-        setTimeout(() => {
-            modal.classList.add('show');
-        }, 4500);
+        const hasVisited = localStorage.getItem('printhub_visited');
+        if (!hasVisited) {
+            // Set flag so it doesn't show again on subsequent loads
+            localStorage.setItem('printhub_visited', 'true');
+            
+            // Wait 4.5 seconds after page load before opening the modal popup
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 4500);
+        }
 
         const closeModal = () => {
             modal.classList.remove('show');
