@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your custom polaroids and prints live. Stay updated on PrintHub packaging, processing, and shipping.">
+    <title>PrintHub - Track Your Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Outer Wrapper with Premium Purple Border -->
+    <div class="page-wrapper">
+        <!-- Sub Header Bar -->
+        <div class="sub-header-bar">
+            <span class="sub-header-tag">LIVE UPDATES</span>
+            <span class="sub-header-text">Telegram notifications are now active! Connect your bot inside.</span>
+            <a href="#open-bot-btn" class="sub-header-link">Connect Now &rarr;</a>
+        </div>
+
+        <!-- Background Grid & Glowing Blobs -->
+        <div class="grid-overlay"></div>
+        <div class="glow-blob blob-top-left"></div>
+        <div class="glow-blob blob-bottom-right"></div>
+        
+        <!-- Floating tape strip on the left -->
+        <div class="floating-tape-left"></div>
+
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="logo-text">PRINT</span><span class="logo-subtext">HUB</span>
+                </a>
+
+                <!-- Nav Menu -->
+                <nav class="nav-menu">
+                    <a href="index.html#features" class="nav-btn"><span>Features</span></a>
+                    <a href="index.html#how-it-works" class="nav-btn"><span>How it Works</span></a>
+                    <a href="memories.html" class="nav-btn btn-pink"><span>Gallery</span></a>
+                    <a href="tracking.html" class="nav-btn"><span>Tracking</span></a>
+                </nav>
+
+                <!-- Auth / CTA Actions -->
+                <div class="auth-actions">
+                    <a href="index.html#login" class="nav-btn login-btn"><span>Log In</span></a>
+                    <a href="index.html#get-started" class="nav-btn cta-btn"><span>Get Started</span></a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Tracking Main Section -->
+        <main class="tracking-section">
+            <!-- Title Header -->
+            <div class="tracking-header">
+                <h1 class="tracking-main-title">Track Your Order</h1>
+                <p class="tracking-subtitle">Stay updated on your premium prints. We provide real-time status notifications through our integrated Telegram system or manual lookup below.</p>
+            </div>
+
+            <!-- Two Column Grid -->
+            <div class="tracking-grid">
+                <!-- Left Column: Telegram and Instructions -->
+                <div class="tracking-left-column">
+                    <!-- Telegram Live Updates Card -->
+                    <div class="telegram-card">
+                        <span class="recommended-badge">RECOMMENDED METHOD</span>
+                        
+                        <div class="telegram-left">
+                            <h2 class="telegram-card-title">Live Updates<br>via Telegram</h2>
+                            <p class="telegram-card-desc">Join our automated bot to receive instant push notifications the moment your prints move from "Processing" to "Shipped".</p>
+                            <a href="https://t.me/printhub_bot" target="_blank" class="telegram-btn" id="open-bot-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Open Telegram Bot
+                            </a>
+                        </div>
+
+                        <!-- Polaroid QR Code representation -->
+                        <div class="telegram-polaroid">
+                            <div class="tape tape-top"></div>
+                            <div class="qr-code-placeholder">
+                                <svg class="qr-code-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0,0 h30 v30 h-30 z M10,10 h10 v10 h-10 z M70,0 h30 v30 h-30 z M80,10 h10 v10 h-10 z M0,70 h30 v30 h-30 z M10,80 h10 v10 h-10 z" />
+                                    <path d="M40,0 h10 v10 h-10 z M50,15 h15 v5 h-15 z M45,25 h5 v5 h-5 z M35,45 h10 v10 h-10 z M55,40 h15 v10 h-15 z" />
+                                    <path d="M0,40 h10 v5 h-5 v10 h-5 z M15,55 h10 v5 h-10 z M80,45 h15 v5 h-15 z M75,55 h5 v15 h-5 z M90,80 h10 v20 h-10 z" />
+                                    <path d="M40,70 h5 v10 h-5 z M50,85 h15 v5 h-15 z M45,95 h15 v5 h-15 z M60,60 h5 v5 h-5 z M85,90 h5 v5 h-5 z" />
+                                    <path d="M35,15 h5 v15 h-5 z M55,5 h10 v5 h-10 z M80,35 h5 v5 h-5 z M65,75 h10 v10 h-10 z M70,90 h10 v5 h-10 z" />
+                                </svg>
+                            </div>
+                            <div class="polaroid-caption-sm">Scan to connect bot</div>
+                        </div>
+                    </div>
+
+                    <!-- Steps Row -->
+                    <div class="tracking-steps">
+                        <div class="tracking-step-card">
+                            <span class="step-card-num">1</span>
+                            <h3 class="step-card-title">Open Bot</h3>
+                            <p class="step-card-desc">Click the primary button to launch our official Telegram interface.</p>
+                        </div>
+                        <div class="tracking-step-card">
+                            <span class="step-card-num pink">2</span>
+                            <h3 class="step-card-title">Enter ID</h3>
+                            <p class="step-card-desc">Type your unique Order ID provided in your confirmation email.</p>
+                        </div>
+                        <div class="tracking-step-card">
+                            <span class="step-card-num dark">3</span>
+                            <h3 class="step-card-title">Get Updates</h3>
+                            <p class="step-card-desc">Receive instant notifications for every stage of your order lifecycle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Manual Lookup -->
+                <div class="manual-search-card">
+                    <h2 class="manual-card-title">Manual Search</h2>
+                    <p class="manual-card-desc">Prefer to check right here? Enter your details below.</p>
+                    
+                    <form class="search-form" id="order-lookup-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="order-id-input" class="form-label">Order ID</label>
+                            <input type="text" id="order-id-input" class="form-input" placeholder="PH-XXXX-XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-input" class="form-label">Guest Email</label>
+                            <input type="email" id="email-input" class="form-input" placeholder="email@example.com" required>
+                        </div>
+                        <button type="submit" class="find-order-btn" id="find-order-btn">Find My Order</button>
+                    </form>
+
+                    <div class="search-divider"></div>
+
+                    <div class="support-link-wrapper">
+                        <svg class="support-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        <span class="support-text">Need help? <a href="index.html#support" class="support-link">Contact Support</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Stage Card: Crafted with Precision (Shown when Quality Check is active) -->
+            <div class="precision-card" id="precision-details-card">
+                <div class="precision-overlay"></div>
+                <div class="precision-content-left">
+                    <div class="precision-badges">
+                        <span class="precision-badge">In Quality Check</span>
+                        <span class="precision-badge">Awaiting Courier</span>
+                    </div>
+                    <h2 class="precision-title">Crafted with Precision</h2>
+                    <p class="precision-desc">Every print undergoes a rigorous 3-step quality verification before leaving our hub. We ensure color accuracy, paper integrity, and packaging security so your memories arrive exactly as you remember them.</p>
+                </div>
+                
+                <div class="precision-content-right">
+                    <div class="precision-polaroid">
+                        <div class="precision-sticker">100%</div>
+                        <div class="polaroid-image-wrapper">
+                            <img src="assets/precision_print.png" alt="High quality print preview" class="polaroid-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Width Progress Card -->
+            <div class="progress-card">
+                <span class="progress-card-title">Order Progress Track</span>
+                
+                <div class="timeline-container">
+                    <!-- Progress Bar line -->
+                    <div class="timeline-line">
+                        <div class="timeline-line-progress" id="timeline-progress-bar"></div>
+                    </div>
+
+                    <!-- 4 Steps -->
+                    <div class="timeline-steps">
+                        <!-- Step 1: Order Received -->
+                        <div class="timeline-step" id="step-received">
+                            <div class="step-icon-wrapper">
+                                <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span class="step-title-text">Order Received</span>
+                            <span class="step-date-text" id="date-received">Confirmed Oct 12</span>
+                        </div>
+
+                        <!-- Step 2: In the Darkroom -->
+                        <div class="timeline-step" id="step-darkroom">
+                            <div class="step-icon-wrapper">
+                                <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span class="step-title-text">In the Darkroom</span>
+                            <span class="step-date-text" id="date-darkroom">Processing Oct 13</span>
+                        </div>
+
+                        <!-- Step 3: Quality Check -->
+                        <div class="timeline-step" id="step-quality">
+                            <div class="step-icon-wrapper">
+                                <svg class="current-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                </svg>
+                            </div>
+                            <span class="step-title-text">Quality Check</span>
+                            <span class="step-date-text" id="date-quality">In Progress</span>
+                        </div>
+
+                        <!-- Step 4: Shipped -->
+                        <div class="timeline-step" id="step-shipped">
+                            <div class="step-icon-wrapper">
+                                <svg class="pending-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                            </div>
+                            <span class="step-title-text">Shipped</span>
+                            <span class="step-date-text" id="date-shipped">Estimated Oct 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <!-- Left copyright info block -->
+                <div class="footer-card footer-left-card">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">PRINT</span><span class="logo-subtext">HUB</span>
+                    </h3>
+                    <p class="footer-copy">
+                        © 2026 Print Hub. Turning digital memories into tactile 3D treasures.
+                    </p>
+                </div>
+
+                <!-- Right links block (Pink Background) -->
+                <div class="footer-card footer-links-card">
+                    <a href="index.html#privacy" class="footer-link-btn"><span>Privacy Policy</span></a>
+                    <a href="index.html#terms" class="footer-link-btn"><span>Terms of Service</span></a>
+                    <a href="index.html#shipping" class="footer-link-btn"><span>Shipping Info</span></a>
+                    <a href="index.html#support" class="footer-link-btn"><span>Support</span></a>
+                    <a href="https://instagram.com" target="_blank" class="footer-link-btn btn-purple"><span>Instagram</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script links -->
+    <script src="tracking.js"></script>
+</body>
+</html>

@@ -86,31 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Polaroid Stack (Personal Section) Fan Out Interaction
+    // Polaroid Stack (Personal Section) Fan Out Interaction for Mobile & Click
     const stackContainer = document.querySelector('.polaroid-stack-container');
-    const redCard = document.querySelector('.stack-back-card-red');
-    const purpleCard = document.querySelector('.stack-back-card-purple');
-    const frontCard = document.querySelector('.stack-front-card');
 
-    if (stackContainer && redCard && purpleCard && frontCard) {
-        stackContainer.addEventListener('mouseenter', () => {
-            redCard.style.transform = 'rotate(-15deg) translate(-22px, 18px)';
-            purpleCard.style.transform = 'rotate(-7deg) translate(-14px, 6px)';
-            frontCard.style.transform = 'rotate(8deg) translate(14px, -8px) scale(1.02)';
-        });
-
-        stackContainer.addEventListener('mouseleave', () => {
-            redCard.style.transform = 'rotate(-10deg) translate(-10px, 12px)';
-            purpleCard.style.transform = 'rotate(-4deg) translate(-8px, 2px)';
-            frontCard.style.transform = 'rotate(5deg) translate(8px, -5px)';
-        });
-
-        // Add fun wiggle on click
-        frontCard.addEventListener('click', () => {
-            frontCard.style.transform += ' scale(1.04) rotate(2deg)';
-            setTimeout(() => {
-                frontCard.style.transform = 'rotate(8deg) translate(14px, -8px) scale(1.02)';
-            }, 180);
+    if (stackContainer) {
+        stackContainer.addEventListener('click', (e) => {
+            // Do not toggle if clicking a link or button
+            if (e.target.closest('a') || e.target.closest('button')) {
+                return;
+            }
+            stackContainer.classList.toggle('fanned');
         });
     }
 

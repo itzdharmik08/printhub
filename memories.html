@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrintHub Gallery - A curated showcase of custom polaroids, tactile prints, and creative works crafted in our darkroom.">
+    <title>PrintHub - Gallery Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Outer Wrapper with Premium Purple Border -->
+    <div class="page-wrapper">
+        <!-- Sub Header Bar -->
+        <div class="sub-header-bar">
+            <span class="sub-header-tag">GALLERY BOARD</span>
+            <span class="sub-header-text">Explore our custom print portfolio! Feel free to browse and like your favorite print creations.</span>
+            <a href="#board-section" class="sub-header-link">View Portfolio &rarr;</a>
+        </div>
+
+        <!-- Background Grid & Glowing Blobs -->
+        <div class="grid-overlay"></div>
+        <div class="glow-blob blob-top-left"></div>
+        <div class="glow-blob blob-bottom-right"></div>
+        
+        <!-- Floating tape strip on the left -->
+        <div class="floating-tape-left"></div>
+
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="logo-text">PRINT</span><span class="logo-subtext">HUB</span>
+                </a>
+
+                <!-- Nav Menu -->
+                <nav class="nav-menu">
+                    <a href="index.html#features" class="nav-btn"><span>Features</span></a>
+                    <a href="index.html#how-it-works" class="nav-btn"><span>How it Works</span></a>
+                    <a href="memories.html" class="nav-btn btn-pink"><span>Gallery</span></a>
+                    <a href="tracking.html" class="nav-btn"><span>Tracking</span></a>
+                </nav>
+
+                <!-- Auth / CTA Actions -->
+                <div class="auth-actions">
+                    <a href="index.html#login" class="nav-btn login-btn"><span>Log In</span></a>
+                    <a href="index.html#get-started" class="nav-btn cta-btn"><span>Get Started</span></a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Memories Showcase Section -->
+        <main class="memories-section" id="board-section">
+            <div class="memories-header">
+                <h1 class="memories-main-title">OUR CREATIONS</h1>
+                <p class="memories-subtitle">A digital gallery board showcasing tactile magic straight from our darkroom. Feel free to browse and like our print creations.</p>
+            </div>
+
+            <!-- The Corkboard Grid Board -->
+            <div class="memories-board">
+                <!-- Board Grid Overlay (dots) -->
+                <div class="board-grid-overlay"></div>
+                
+                <!-- Board Grid -->
+                <div class="board-grid" id="board-grid">
+                    
+                    <!-- Dynamic Polaroid Cards will be inserted here by JavaScript -->
+                    
+                    <!-- Add to Board Dashed Card (8th card slot) -->
+                    <div class="add-card-dashed" id="add-card-dashed" style="display: none;">
+                        <div class="add-card-inner">
+                            <div class="add-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="camera-plus-icon">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                    <line x1="21" y1="1" x2="21" y2="7"></line>
+                                    <line x1="18" y1="4" x2="24" y2="4"></line>
+                                </svg>
+                            </div>
+                            <span class="pin-new-text">PIN NEW CREATION</span>
+                            <span class="add-to-board-text">ADD TO SHOWCASE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <!-- Left copyright info block -->
+                <div class="footer-card footer-left-card">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">PRINT</span><span class="logo-subtext">HUB</span>
+                    </h3>
+                    <p class="footer-copy">
+                        © 2026 Print Hub. Turning digital memories into tactile 3D treasures.
+                    </p>
+                </div>
+
+                <!-- Right links block (Pink Background) -->
+                <div class="footer-card footer-links-card">
+                    <a href="index.html#privacy" class="footer-link-btn"><span>Privacy Policy</span></a>
+                    <a href="index.html#terms" class="footer-link-btn"><span>Terms of Service</span></a>
+                    <a href="index.html#shipping" class="footer-link-btn"><span>Shipping Info</span></a>
+                    <a href="index.html#support" class="footer-link-btn"><span>Support</span></a>
+                    <a href="https://instagram.com" target="_blank" class="footer-link-btn btn-purple"><span>Instagram</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Add Memory Modal (Owner Mode Only) -->
+    <div class="coming-soon-modal" id="add-memory-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-card modal-custom-form">
+            <!-- Decorative Polaroid tape strip -->
+            <div class="tape tape-top"></div>
+            
+            <button class="modal-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <span class="modal-tag">ADD NEW WORK</span>
+            <h2 class="modal-title">Add to Showcase</h2>
+            <p class="modal-text">Pin a new photograph of your print creations to the public gallery board.</p>
+            
+            <form id="add-memory-form" class="neobrutalist-form">
+                <div class="form-group">
+                    <label for="memory-caption" class="form-label">CREATION CAPTION / NAME</label>
+                    <input type="text" id="memory-caption" class="form-input" placeholder="e.g. VINTAGE OVERLAYS" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-upload" class="form-label">SELECT CREATION PHOTO</label>
+                    <input type="file" id="photo-upload" accept="image/*" class="form-file-input">
+                </div>
+
+                <!-- Customization Options -->
+                <div class="customization-options">
+                    <div class="option-col">
+                        <span class="form-label">TAPE COLOR</span>
+                        <div class="color-options-container">
+                            <button type="button" class="color-option tape-pink active" data-type="tape" data-color="tape-pink" aria-label="Pink Tape" style="background-color: var(--pink);"></button>
+                            <button type="button" class="color-option tape-blue" data-type="tape" data-color="tape-blue" aria-label="Blue Tape" style="background-color: var(--blue);"></button>
+                            <button type="button" class="color-option tape-purple" data-type="tape" data-color="tape-purple" aria-label="Purple Tape" style="background-color: var(--primary);"></button>
+                            <button type="button" class="color-option tape-yellow" data-type="tape" data-color="tape-yellow" aria-label="Yellow Tape" style="background-color: #ffe600;"></button>
+                            <button type="button" class="color-option tape-orange" data-type="tape" data-color="tape-orange" aria-label="Orange Tape" style="background-color: #f97316;"></button>
+                        </div>
+                    </div>
+                    <div class="option-col">
+                        <span class="form-label">PIN COLOR</span>
+                        <div class="color-options-container">
+                            <button type="button" class="color-option pin-blue active" data-type="pin" data-color="pin-blue" aria-label="Blue Pin" style="background-color: var(--blue);"></button>
+                            <button type="button" class="color-option pin-pink" data-type="pin" data-color="pin-pink" aria-label="Pink Pin" style="background-color: var(--pink);"></button>
+                            <button type="button" class="color-option pin-green" data-type="pin" data-color="pin-green" aria-label="Green Pin" style="background-color: #10b981;"></button>
+                            <button type="button" class="color-option pin-red" data-type="pin" data-color="pin-red" aria-label="Red Pin" style="background-color: #ef4444;"></button>
+                            <button type="button" class="color-option pin-purple" data-type="pin" data-color="pin-purple" aria-label="Purple Pin" style="background-color: var(--primary);"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-form-actions">
+                    <button type="button" class="modal-cancel"><span>Cancel</span></button>
+                    <button type="submit" class="modal-submit"><span>Pin Creation</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Include Memories Javascript -->
+    <script src="memories.js"></script>
+</body>
+</html>
