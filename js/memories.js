@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultMemories = [
         {
             id: 'mem-1',
-            title: 'TRAIL 1',
-            image: 'assets/traial 1.png',
+            title: 'SUMMER PICNIC \'24',
+            image: 'assets/summer_gear.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
-            tilt: -3,
+            tilt: 4,
             likes: 24,
             likedByUser: false,
             comments: [
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'mem-2',
-            title: 'TRIAL 2',
-            image: 'assets/traial 2.png',
+            title: 'ALPINE MORNINGS',
+            image: 'assets/alpine_mornings.png',
             tape: 'tape-blue',
             pin: 'pin-yellow',
-            tilt: 3,
+            tilt: -3,
             likes: 42,
             likedByUser: false,
             comments: [
@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'mem-3',
-            title: 'TRIAL 3',
-            image: 'assets/traial 3.png',
+            title: 'NEON TOKYO',
+            image: 'assets/neon_tokyo.png',
             tape: 'tape-purple',
             pin: 'pin-yellow',
-            tilt: -4,
-            likes: 42,
+            tilt: 5,
+            likes: 87,
             likedByUser: false,
             comments: [
                 { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'mem-4',
-            title: 'TRIAL 4',
-            image: 'assets/traial 4.png',
+            title: 'MODERN GEOMETRY',
+            image: 'assets/modern_geometry.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
-            tilt: 2,
-            likes: 42,
+            tilt: -5,
+            likes: 19,
             likedByUser: false,
             comments: [
                 { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
@@ -77,21 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'mem-5',
-            title: 'TRIAL 5',
-            image: 'assets/traial 5.png',
-            tape: 'tape-orange',
+            title: 'LIBRARY SOLITUDE',
+            image: 'assets/library_solitude.png',
+            tape: 'tape-blue',
             pin: 'pin-yellow',
-            tilt: -2,
-            likes: 42,
+            tilt: 3,
+            likes: 31,
             likedByUser: false,
             comments: [
                 { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
             ]
         },
         {
-            id: 'mem-7',
-            title: 'TRIAL 7',
-            image: 'assets/trail 7.png',
+            id: 'mem-6',
+            title: 'MACRO MORNING',
+            image: 'assets/macro_morning.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
             tilt: -2,
@@ -144,46 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
             comments: []
         },
         {
-            id: 'mem-12',
-            title: 'TRIAL 12',
-            image: 'assets/trail 12.png',
-            tape: 'tape-pink',
-            pin: 'pin-yellow',
-            tilt: 3,
-            likes: 22,
-            likedByUser: false,
-            comments: []
-        },
-        {
-            id: 'mem-13',
-            title: 'TRIAL 13',
-            image: 'assets/trail 13.png',
-            tape: 'tape-blue',
-            pin: 'pin-yellow',
-            tilt: -1,
-            likes: 41,
-            likedByUser: false,
-            comments: []
-        },
-        {
-            id: 'mem-14',
-            title: 'TRIAL 14',
-            image: 'assets/trail 14.png',
+            id: 'mem-7',
+            title: 'PACIFIC POWER',
+            image: 'assets/pacific_power.png',
             tape: 'tape-purple',
             pin: 'pin-yellow',
-            tilt: 5,
-            likes: 33,
-            likedByUser: false,
-            comments: []
-        },
-        {
-            id: 'mem-15',
-            title: 'TRIAL 15',
-            image: 'assets/trail 15.png',
-            tape: 'tape-orange',
-            pin: 'pin-yellow',
-            tilt: -3,
-            likes: 27,
+            tilt: 6,
+            likes: 56,
             likedByUser: false,
             comments: []
         }
@@ -476,13 +443,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Standard assets array for random fallback if no image uploaded
             const fallbacks = [
-                'assets/summer_gear.png',
-                'assets/the_crew.png',
-                'assets/miss_you.png',
-                'assets/precision_print.png',
-                'assets/alpine_mornings.png',
-                'assets/neon_tokyo.png',
-                'assets/modern_geometry.png'
+                '../assets/summer_gear.png',
+                '../assets/the_crew.png',
+                '../assets/miss_you.png',
+                '../assets/precision_print.png',
+                '../assets/alpine_mornings.png',
+                '../assets/neon_tokyo.png',
+                '../assets/modern_geometry.png'
             ];
 
             const randomFallback = fallbacks[Math.floor(Math.random() * fallbacks.length)];

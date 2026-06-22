@@ -7,7 +7,7 @@
     <meta name="description"
         content="PrintHub - Real tactile magic for your digital memories. Fast, chunky, and totally rad. Turn pixels into beautiful polaroids and prints.">
     <title>PrintHub - Turn Pixels Into Prints</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -40,14 +40,14 @@
                 <nav class="nav-menu">
                     <a href="#features" class="nav-btn"><span>Features</span></a>
                     <a href="#how-it-works" class="nav-btn"><span>How it Works</span></a>
-                    <a href="memories.html" class="nav-btn btn-pink"><span>Gallery</span></a>
-                    <a href="tracking.html" class="nav-btn"><span>Tracking</span></a>
+                    <a href="pages/memories.html" class="nav-btn btn-pink"><span>Gallery</span></a>
+                    <a href="pages/tracking.html" class="nav-btn"><span>Tracking</span></a>
                 </nav>
 
                 <!-- Auth / CTA Actions -->
                 <div class="auth-actions">
                     <a href="#login" class="nav-btn login-btn"><span>Log In</span></a>
-                    <a href="#get-started" class="nav-btn cta-btn"><span>Get Started</span></a>
+                    <a href="pages/checkout.html" class="nav-btn cta-btn"><span>Get Started</span></a>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
@@ -72,9 +72,9 @@
                         <p class="subtitle-text">
                             Real tactile magic for your digital memories. Fast, chunky, and totally rad.
                         </p>
-                        <button class="print-now-btn">
+                        <a href="pages/checkout.html" class="print-now-btn" style="text-decoration: none; display: inline-block; text-align: center;">
                             Print Now
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -437,33 +437,46 @@
                         <span class="logo-text">PRINT</span><span class="logo-subtext">HUB</span>
                     </h3>
                     <p class="footer-desc">
-                        Turning digital snapshots into tactile darkroom magic. Real ink, heavy prints, shipped straight to your door.
+                        Turning digital snapshots into tactile darkroom magic. Real ink, heavy prints, shipped straight
+                        to your door.
                     </p>
                     <div class="footer-socials">
                         <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="social-icon">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
                         <a href="https://pinterest.com" target="_blank" class="social-btn" aria-label="Pinterest">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
-                                <path d="M8 22c-.66 0-1.12-.55-1.12-1.2 0-.6.18-1.57.38-2.42L8.5 13.3c-.2-.42-.32-.97-.32-1.6 0-2.2 1.25-3.85 2.85-3.85 1.34 0 2 .9 2 2.2 0 1.34-.84 3.35-1.28 5.2-.37 1.57.77 2.85 2.3 2.85 2.76 0 4.9-2.9 4.9-7.1 0-3.7-2.67-6.3-6.5-6.3-4.4 0-7 3.3-7 6.74 0 1.33.5 2.76 1.15 3.54.12.15.14.28.1.44-.1.4-.35,1.5-.4,1.7-.06.26-.2.32-.47.2-1.78-.83-2.9-3.46-2.9-5.56C2.5 7.15 6 3 12.3 3c5 0 8.7 3.6 8.7 8.1 0 5-3.15 8.6-7.25 8.6-1.4 0-2.73-.74-3.18-1.6l-.87 3.3c-.3 1.15-1.15 2.6-1.7 3.5A10 10 0 0 0 8 22z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="social-icon">
+                                <path
+                                    d="M8 22c-.66 0-1.12-.55-1.12-1.2 0-.6.18-1.57.38-2.42L8.5 13.3c-.2-.42-.32-.97-.32-1.6 0-2.2 1.25-3.85 2.85-3.85 1.34 0 2 .9 2 2.2 0 1.34-.84 3.35-1.28 5.2-.37 1.57.77 2.85 2.3 2.85 2.76 0 4.9-2.9 4.9-7.1 0-3.7-2.67-6.3-6.5-6.3-4.4 0-7 3.3-7 6.74 0 1.33.5 2.76 1.15 3.54.12.15.14.28.1.44-.1.4-.35,1.5-.4,1.7-.06.26-.2.32-.47.2-1.78-.83-2.9-3.46-2.9-5.56C2.5 7.15 6 3 12.3 3c5 0 8.7 3.6 8.7 8.1 0 5-3.15 8.6-7.25 8.6-1.4 0-2.73-.74-3.18-1.6l-.87 3.3c-.3 1.15-1.15 2.6-1.7 3.5A10 10 0 0 0 8 22z">
+                                </path>
                             </svg>
                         </a>
                         <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="social-icon">
                                 <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                                 <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
                             </svg>
                         </a>
                         <a href="https://discord.com" target="_blank" class="social-btn" aria-label="Discord">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="social-icon">
                                 <path d="M18 8a6 6 0 0 0-12 0c0 3 2 6 6 6s6-3 6-6Z"></path>
                                 <circle cx="9" cy="8" r="1"></circle>
                                 <circle cx="15" cy="8" r="1"></circle>
-                                <path d="M12 14c.5 1.5 1.5 3 3.5 3.5A9.7 9.7 0 0 1 12 18a9.7 9.7 0 0 1-3.5-.5C10.5 17 11.5 15.5 12 14Z"></path>
+                                <path
+                                    d="M12 14c.5 1.5 1.5 3 3.5 3.5A9.7 9.7 0 0 1 12 18a9.7 9.7 0 0 1-3.5-.5C10.5 17 11.5 15.5 12 14Z">
+                                </path>
                             </svg>
                         </a>
                     </div>
@@ -473,8 +486,8 @@
                 <div class="footer-col links-col">
                     <h4 class="footer-col-title">SHOP</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#get-started">Custom Polaroids</a></li>
-                        <li><a href="memories.html">Creations Board</a></li>
+                        <li><a href="pages/checkout.html">Custom Polaroids</a></li>
+                        <li><a href="pages/memories.html">Creations Board</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
                     </ul>
@@ -484,7 +497,7 @@
                 <div class="footer-col links-col">
                     <h4 class="footer-col-title">SUPPORT</h4>
                     <ul class="footer-links-list">
-                        <li><a href="tracking.html">Track Order</a></li>
+                        <li><a href="pages/tracking.html">Track Order</a></li>
                         <li><a href="#shipping">Shipping Info</a></li>
                         <li><a href="#faqs">FAQs / Help</a></li>
                         <li><a href="#support">Contact Support</a></li>
@@ -495,7 +508,8 @@
                 <div class="footer-col newsletter-col">
                     <h4 class="footer-col-title">STAY RAD</h4>
                     <p class="newsletter-desc">Get developed news, printing tips, and early access alerts.</p>
-                    <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Rad! You are subscribed.'); this.reset();">
+                    <form class="footer-newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Rad! You are subscribed.'); this.reset();">
                         <div class="newsletter-input-group">
                             <input type="email" placeholder="YOUR EMAIL" class="newsletter-input" required>
                             <button type="submit" class="newsletter-btn"><span>SUB</span></button>
@@ -542,7 +556,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
