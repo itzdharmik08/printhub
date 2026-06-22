@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-1', 
             title: 'SUMMER PICNIC \'24', 
-            image: 'assets/summer_gear.png', 
+            image: '../assets/summer_gear.png', 
             tape: 'tape-pink', 
             pin: 'pin-yellow', 
             tilt: 4,
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-2', 
             title: 'ALPINE MORNINGS', 
-            image: 'assets/alpine_mornings.png', 
+            image: '../assets/alpine_mornings.png', 
             tape: 'tape-blue', 
             pin: 'pin-yellow', 
             tilt: -3,
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-3', 
             title: 'NEON TOKYO', 
-            image: 'assets/neon_tokyo.png', 
+            image: '../assets/neon_tokyo.png', 
             tape: 'tape-purple', 
             pin: 'pin-yellow', 
             tilt: 5,
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-4', 
             title: 'MODERN GEOMETRY', 
-            image: 'assets/modern_geometry.png', 
+            image: '../assets/modern_geometry.png', 
             tape: 'tape-pink', 
             pin: 'pin-yellow', 
             tilt: -5,
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-5', 
             title: 'LIBRARY SOLITUDE', 
-            image: 'assets/library_solitude.png', 
+            image: '../assets/library_solitude.png', 
             tape: 'tape-blue', 
             pin: 'pin-yellow', 
             tilt: 3,
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-6', 
             title: 'MACRO MORNING', 
-            image: 'assets/macro_morning.png', 
+            image: '../assets/macro_morning.png', 
             tape: 'tape-pink', 
             pin: 'pin-yellow', 
             tilt: -2,
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { 
             id: 'mem-7', 
             title: 'PACIFIC POWER', 
-            image: 'assets/pacific_power.png', 
+            image: '../assets/pacific_power.png', 
             tape: 'tape-purple', 
             pin: 'pin-yellow', 
             tilt: 6,
@@ -433,13 +433,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Standard assets array for random fallback if no image uploaded
             const fallbacks = [
-                'assets/summer_gear.png',
-                'assets/the_crew.png',
-                'assets/miss_you.png',
-                'assets/precision_print.png',
-                'assets/alpine_mornings.png',
-                'assets/neon_tokyo.png',
-                'assets/modern_geometry.png'
+                '../assets/summer_gear.png',
+                '../assets/the_crew.png',
+                '../assets/miss_you.png',
+                '../assets/precision_print.png',
+                '../assets/alpine_mornings.png',
+                '../assets/neon_tokyo.png',
+                '../assets/modern_geometry.png'
             ];
             
             const randomFallback = fallbacks[Math.floor(Math.random() * fallbacks.length)];
