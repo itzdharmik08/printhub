@@ -12,7 +12,7 @@
     --tape-color: rgba(245, 245, 240, 0.82);
     --border-width: 3px;
     --border-radius-sm: 4px;
-    
+
     /* Neobrutalist Shadow styles */
     --shadow-black: 4px 4px 0px 0px var(--dark);
     --shadow-black-lg: 8px 8px 0px 0px var(--dark);
@@ -27,7 +27,8 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     font-family: 'Outfit', sans-serif;
@@ -94,14 +95,12 @@ html, body {
     height: 38px;
     background-color: var(--tape-color);
     backdrop-filter: blur(1px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     transform: rotate(-12deg);
     z-index: 2;
-    clip-path: polygon(
-        0% 12%, 8% 0%, 93% 2%, 100% 15%, 
-        97% 48%, 100% 88%, 91% 100%, 7% 98%, 
-        0% 85%, 3% 45%
-    );
+    clip-path: polygon(0% 12%, 8% 0%, 93% 2%, 100% 15%,
+            97% 48%, 100% 88%, 91% 100%, 7% 98%,
+            0% 85%, 3% 45%);
     border-left: 1.5px dashed rgba(0, 0, 0, 0.1);
     border-right: 1.5px dashed rgba(0, 0, 0, 0.1);
 }
@@ -138,7 +137,8 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(97, 31, 219, 0.4); /* purple tint overlay */
+    background-color: rgba(97, 31, 219, 0.4);
+    /* purple tint overlay */
     backdrop-filter: blur(4px);
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -258,12 +258,15 @@ html, body {
     .modal-card {
         padding: 40px 24px;
     }
+
     .modal-title {
         font-size: 1.8rem;
     }
+
     .modal-text {
         font-size: 1rem;
     }
+
     .modal-btn {
         padding: 12px 24px;
         font-size: 1rem;
@@ -273,7 +276,8 @@ html, body {
 /* Sub Header Bar */
 .sub-header-bar {
     width: 100%;
-    background-color: #ffe600; /* Neon Yellow */
+    background-color: #ffe600;
+    /* Neon Yellow */
     border-bottom: var(--border-width) solid var(--dark);
     padding: 8px 40px;
     display: flex;
@@ -303,7 +307,8 @@ html, body {
 }
 
 .sub-header-link {
-    color: var(--primary); /* Bright Purple */
+    color: var(--primary);
+    /* Bright Purple */
     text-decoration: underline;
     text-underline-offset: 3px;
     font-weight: 800;
@@ -412,6 +417,7 @@ html, body {
     background-color: var(--pink);
     color: var(--light);
 }
+
 .btn-pink:hover {
     background-color: var(--pink-hover);
 }
@@ -424,6 +430,7 @@ html, body {
     background-color: var(--primary);
     color: var(--light);
 }
+
 .cta-btn:hover {
     background-color: var(--primary-hover);
 }
@@ -639,14 +646,12 @@ html, body {
     height: 28px;
     background-color: var(--tape-color);
     backdrop-filter: blur(1px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     z-index: 15;
     pointer-events: none;
-    clip-path: polygon(
-        0% 10%, 6% 0%, 94% 2%, 100% 12%, 
-        98% 46%, 100% 88%, 93% 100%, 6% 98%, 
-        0% 88%, 2% 45%
-    );
+    clip-path: polygon(0% 10%, 6% 0%, 94% 2%, 100% 12%,
+            98% 46%, 100% 88%, 93% 100%, 6% 98%,
+            0% 88%, 2% 45%);
     border-left: 1.5px dashed rgba(0, 0, 0, 0.12);
     border-right: 1.5px dashed rgba(0, 0, 0, 0.12);
 }
@@ -736,7 +741,8 @@ html, body {
     left: -22px;
     width: 44px;
     height: 44px;
-    background-color: #2b1263; /* Dark purple */
+    background-color: #2b1263;
+    /* Dark purple */
     border: var(--border-width) solid var(--dark);
     color: var(--light);
     font-size: 1.35rem;
@@ -893,13 +899,11 @@ html, body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, #7ee8fa 0%, #80f3b9 100%);
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.05),
-        rgba(0, 0, 0, 0.05) 4px,
-        transparent 4px,
-        transparent 8px
-    ), linear-gradient(135deg, #7ee8fa 0%, #80f3b9 100%);
+    background-image: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.05) 4px,
+            transparent 4px,
+            transparent 8px), linear-gradient(135deg, #7ee8fa 0%, #80f3b9 100%);
 }
 
 .personal-caption {
@@ -967,7 +971,8 @@ html, body {
 
 /* Pink Highlight Box */
 .highlight-pink {
-    background-color: #e60067; /* Neon Pink */
+    background-color: #e60067;
+    /* Neon Pink */
     border: 2.5px solid var(--dark);
     display: inline-block;
     padding: 2px 14px;
@@ -980,7 +985,8 @@ html, body {
 .personal-subtitle {
     font-size: 1.15rem;
     line-height: 1.5;
-    color: #4b5563; /* Gray text */
+    color: #4b5563;
+    /* Gray text */
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -1157,7 +1163,8 @@ html, body {
 }
 
 .bot-status {
-    color: #10b981; /* Telegram green online */
+    color: #10b981;
+    /* Telegram green online */
     font-weight: 700;
     font-size: 0.85rem;
 }
@@ -1217,7 +1224,8 @@ html, body {
 /* Right (Sent) message bubble */
 .msg-sent {
     align-self: flex-end;
-    background-color: #ebd7ff; /* Very soft purple background */
+    background-color: #ebd7ff;
+    /* Very soft purple background */
     border-radius: 10px 10px 0px 10px;
 }
 
@@ -1529,7 +1537,7 @@ html, body {
         gap: 80px;
         text-align: center;
     }
-    
+
     .hero-left-card {
         padding: 40px 30px;
     }
@@ -1554,7 +1562,7 @@ html, body {
     .polaroid-card {
         width: 250px;
     }
-    
+
     .blob-top-left {
         top: 25%;
     }
@@ -1573,8 +1581,8 @@ html, body {
         width: 260px;
         height: 320px;
     }
-    
-    .stack-back-card-red, 
+
+    .stack-back-card-red,
     .stack-back-card-purple {
         width: 100%;
         height: 100%;
@@ -1585,10 +1593,12 @@ html, body {
     .polaroid-stack-container.fanned .stack-back-card-red {
         transform: rotate(-15deg) translate(-65px, 10px) scale(0.95);
     }
+
     .polaroid-stack-container:hover .stack-back-card-purple,
     .polaroid-stack-container.fanned .stack-back-card-purple {
         transform: rotate(-4deg) translate(-10px, -25px) scale(0.95);
     }
+
     .polaroid-stack-container:hover .stack-front-card,
     .polaroid-stack-container.fanned .stack-front-card {
         transform: rotate(10deg) translate(60px, -5px) scale(0.95);
@@ -1631,7 +1641,7 @@ html, body {
     .page-wrapper {
         border-width: 5px;
     }
-    
+
     .header-container {
         padding: 15px 20px;
     }
@@ -1691,17 +1701,17 @@ html, body {
         width: 200px;
         padding: 12px 12px 18px 12px;
     }
-    
+
     .polaroid-caption {
         font-size: 1.4rem;
         margin-top: 8px;
     }
-    
+
     .tape {
         width: 70px;
         height: 22px;
     }
-    
+
     .floating-tape-left {
         display: none;
     }
@@ -1710,21 +1720,21 @@ html, body {
     .how-it-works {
         padding: 50px 20px;
     }
-    
+
     .steps-container {
         gap: 50px;
     }
-    
+
     .step-card {
         width: 100%;
         max-width: 340px;
     }
-    
+
     /* Personal mobile styling */
     .personal-section {
         padding: 50px 20px;
     }
-    
+
     .personal-title {
         font-size: 2rem;
     }
@@ -1778,15 +1788,15 @@ html, body {
     .main-title {
         font-size: 2.2rem;
     }
-    
+
     .hero-right-polaroids {
         height: 300px;
     }
-    
+
     .polaroid-card {
         width: 170px;
     }
-    
+
     .polaroid-caption {
         font-size: 1.25rem;
     }
@@ -1820,7 +1830,7 @@ html, body {
     letter-spacing: -0.03em;
     color: var(--dark);
     margin-bottom: 15px;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 .tracking-subtitle {
@@ -2073,7 +2083,7 @@ html, body {
     font-weight: 600;
     color: var(--dark);
     background-color: #f3f4f6;
-    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05);
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.05);
     outline: none;
     transition: background-color 0.15s ease, border-color 0.15s ease;
 }
@@ -2190,7 +2200,8 @@ html, body {
     left: 0;
     height: 100%;
     background-color: var(--dark);
-    width: 66.6%; /* Matches Step 3 In-Progress */
+    width: 66.6%;
+    /* Matches Step 3 In-Progress */
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -2283,10 +2294,12 @@ html, body {
         transform: scale(1);
         opacity: 0.8;
     }
+
     70% {
         transform: scale(1.4);
         opacity: 0;
     }
+
     100% {
         transform: scale(1.4);
         opacity: 0;
@@ -2323,6 +2336,7 @@ html, body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2335,7 +2349,8 @@ html, body {
     position: relative;
     background: url('assets/darkroom_bg.png') no-repeat center center / cover;
     border: var(--border-width) solid var(--dark);
-    box-shadow: 8px 8px 0px 0px var(--primary); /* purple drop shadow */
+    box-shadow: 8px 8px 0px 0px var(--primary);
+    /* purple drop shadow */
     border-radius: var(--border-radius-sm);
     padding: 45px 50px;
     display: flex;
@@ -2353,7 +2368,8 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(15, 12, 30, 0.75); /* Dark tint to read text clearly */
+    background-color: rgba(15, 12, 30, 0.75);
+    /* Dark tint to read text clearly */
     z-index: 1;
 }
 
@@ -2446,20 +2462,20 @@ html, body {
     .tracking-section {
         padding: 40px 20px;
     }
-    
+
     .tracking-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .telegram-card {
         padding: 30px;
     }
-    
+
     .manual-search-card {
         padding: 30px;
     }
-    
+
     .timeline-line {
         left: 10%;
         right: 10%;
@@ -2470,31 +2486,31 @@ html, body {
     .tracking-main-title {
         font-size: 2.5rem;
     }
-    
+
     .telegram-card {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
     }
-    
+
     .telegram-left {
         align-items: center;
     }
-    
+
     .telegram-polaroid {
         margin: 0 auto;
         transform: rotate(0deg);
     }
-    
+
     .tracking-steps {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .timeline-container {
         padding: 0;
     }
-    
+
     .timeline-line {
         top: 20px;
         bottom: 20px;
@@ -2503,26 +2519,26 @@ html, body {
         width: 4px;
         height: auto;
     }
-    
+
     .timeline-line-progress {
         width: 100%;
         height: 66.6%;
     }
-    
+
     .timeline-steps {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
         padding-left: 45px;
     }
-    
+
     .timeline-step {
         flex-direction: row;
         text-align: left;
         width: 100%;
         gap: 16px;
     }
-    
+
     .step-icon-wrapper {
         margin-bottom: 0;
         flex-shrink: 0;
@@ -2536,11 +2552,11 @@ html, body {
         text-align: center;
         gap: 30px;
     }
-    
+
     .precision-badges {
         justify-content: center;
     }
-    
+
     .precision-polaroid {
         margin: 0 auto;
         transform: rotate(0deg);
@@ -2551,11 +2567,11 @@ html, body {
     .tracking-main-title {
         font-size: 2rem;
     }
-    
+
     .telegram-card-title {
         font-size: 1.8rem;
     }
-    
+
     .manual-card-title {
         font-size: 1.8rem;
     }
@@ -2601,7 +2617,8 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 15px;
-    overflow: visible; /* Allows pins and tape to overlap borders */
+    overflow: visible;
+    /* Allows pins and tape to overlap borders */
 }
 
 .board-grid-overlay {
@@ -2611,9 +2628,36 @@ html, body {
 .board-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 45px 30px;
     z-index: 2;
+}
+
+.board-grid.two-items {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.board-taped-image {
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board-taped-image:hover {
+    transform: scale(1.03) translate(-3px, -3px) !important;
+    z-index: 10;
+}
+
+.taped-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
 }
 
 /* Polaroid Cards inside Board */
@@ -2932,7 +2976,8 @@ html, body {
     margin-top: 24px;
 }
 
-.modal-cancel, .modal-submit {
+.modal-cancel,
+.modal-submit {
     flex: 1;
     padding: 12px;
     border: var(--border-width) solid var(--dark);
@@ -2994,11 +3039,11 @@ html, body {
     .memories-main-title {
         font-size: 2.5rem;
     }
-    
+
     .memories-board {
         padding: 20px 15px;
     }
-    
+
     .board-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 20px;
@@ -3009,12 +3054,12 @@ html, body {
     .memories-main-title {
         font-size: 2rem;
     }
-    
+
     .board-grid {
         grid-template-columns: 1fr;
         gap: 35px;
     }
-    
+
     .customization-options {
         flex-direction: column;
         gap: 15px;
@@ -3203,7 +3248,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.04);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .comment-item {
@@ -3288,7 +3333,7 @@ html, body {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .comments-modal-left {
         flex-direction: row;
         justify-content: center;
@@ -3297,22 +3342,22 @@ html, body {
         gap: 15px;
         transform: none;
     }
-    
+
     .modal-polaroid-container {
         margin: 0;
         max-width: 180px;
     }
-    
+
     .modal-like-action-btn {
         margin: 0;
         max-width: 180px;
         font-size: 0.9rem;
     }
-    
+
     .comments-thread-container {
         height: 140px;
     }
-    
+
     .comment-small-input {
         max-width: 100%;
     }
@@ -3323,8 +3368,9 @@ html, body {
         flex-direction: column;
         gap: 15px;
     }
-    
-    .modal-polaroid-container, .modal-like-action-btn {
+
+    .modal-polaroid-container,
+    .modal-like-action-btn {
         max-width: 100%;
         width: 100%;
     }
@@ -3356,25 +3402,24 @@ html, body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .footer-col {
         align-items: center;
         text-align: center;
     }
-    
-    .footer-desc, .newsletter-desc {
+
+    .footer-desc,
+    .newsletter-desc {
         text-align: center;
     }
-    
+
     .footer-bottom-container {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-    
+
     .newsletter-input-group {
         margin: 0 auto;
     }
 }
-
-

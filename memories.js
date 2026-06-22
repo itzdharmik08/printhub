@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
+
             // Toggle hamburger animation
             const bars = mobileToggle.querySelectorAll('.bar');
             if (navMenu.classList.contains('active')) {
@@ -23,97 +23,169 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- State and Default Seed Data ---
     const defaultMemories = [
-        { 
-            id: 'mem-1', 
-            title: 'SUMMER PICNIC \'24', 
-            image: 'assets/summer_gear.png', 
-            tape: 'tape-pink', 
-            pin: 'pin-yellow', 
-            tilt: 4,
+        {
+            id: 'mem-1',
+            title: 'TRAIL 1',
+            image: 'assets/traial 1.png',
+            tape: 'tape-pink',
+            pin: 'pin-yellow',
+            tilt: -3,
             likes: 24,
             likedByUser: false,
             comments: [
-                { name: 'Alice', text: 'This print is gorgeous! The color tone is perfect.', date: 'Jun 12' },
-                { name: 'Jake', text: 'Love the outdoor vibe of this snapshot.', date: 'Jun 15' }
+                { name: 'Alice', text: 'This print is gorgeous! The color tone is perfect.', date: 'Jun 12' }
             ]
         },
-        { 
-            id: 'mem-2', 
-            title: 'ALPINE MORNINGS', 
-            image: 'assets/alpine_mornings.png', 
-            tape: 'tape-blue', 
-            pin: 'pin-yellow', 
-            tilt: -3,
+        {
+            id: 'mem-2',
+            title: 'TRIAL 2',
+            image: 'assets/traial 2.png',
+            tape: 'tape-blue',
+            pin: 'pin-yellow',
+            tilt: 3,
             likes: 42,
             likedByUser: false,
             comments: [
-                { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' },
-                { name: 'Ryan', text: 'Breathtaking print quality.', date: 'Jun 18' }
+                { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
             ]
         },
-        { 
-            id: 'mem-3', 
-            title: 'NEON TOKYO', 
-            image: 'assets/neon_tokyo.png', 
-            tape: 'tape-purple', 
-            pin: 'pin-yellow', 
-            tilt: 5,
-            likes: 87,
+        {
+            id: 'mem-3',
+            title: 'TRIAL 3',
+            image: 'assets/traial 3.png',
+            tape: 'tape-purple',
+            pin: 'pin-yellow',
+            tilt: -4,
+            likes: 42,
             likedByUser: false,
             comments: [
-                { name: 'Sora', text: 'Perfect Shinjuku mood. Captures the rain reflection beautifully.', date: 'Jun 14' }
+                { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
             ]
         },
-        { 
-            id: 'mem-4', 
-            title: 'MODERN GEOMETRY', 
-            image: 'assets/modern_geometry.png', 
-            tape: 'tape-pink', 
-            pin: 'pin-yellow', 
-            tilt: -5,
-            likes: 19,
+        {
+            id: 'mem-4',
+            title: 'TRIAL 4',
+            image: 'assets/traial 4.png',
+            tape: 'tape-pink',
+            pin: 'pin-yellow',
+            tilt: 2,
+            likes: 42,
             likedByUser: false,
             comments: [
-                { name: 'Kev', text: 'Clean architectural lines. Neobrutalist design heaven.', date: 'Jun 19' }
+                { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
             ]
         },
-        { 
-            id: 'mem-5', 
-            title: 'LIBRARY SOLITUDE', 
-            image: 'assets/library_solitude.png', 
-            tape: 'tape-blue', 
-            pin: 'pin-yellow', 
-            tilt: 3,
-            likes: 31,
-            likedByUser: false,
-            comments: [
-                { name: 'Emma', text: 'The warm lamp light glows beautifully in this print.', date: 'Jun 17' }
-            ]
-        },
-        { 
-            id: 'mem-6', 
-            title: 'MACRO MORNING', 
-            image: 'assets/macro_morning.png', 
-            tape: 'tape-pink', 
-            pin: 'pin-yellow', 
+        {
+            id: 'mem-5',
+            title: 'TRIAL 5',
+            image: 'assets/traial 5.png',
+            tape: 'tape-orange',
+            pin: 'pin-yellow',
             tilt: -2,
+            likes: 42,
+            likedByUser: false,
+            comments: [
+                { name: 'Sophia', text: 'The mountain reflection is crystal clear!', date: 'Jun 16' }
+            ]
+        },
+        {
+            id: 'mem-7',
+            title: 'TRIAL 7',
+            image: 'assets/trail 7.png',
+            tape: 'tape-pink',
+            pin: 'pin-yellow',
+            tilt: -2,
+            likes: 35,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-8',
+            title: 'TRIAL 8',
+            image: 'assets/trail 8.png',
+            tape: 'tape-blue',
+            pin: 'pin-yellow',
+            tilt: 4,
+            likes: 18,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-9',
+            title: 'TRIAL 9',
+            image: 'assets/trail 9.png',
+            tape: 'tape-purple',
+            pin: 'pin-yellow',
+            tilt: -3,
+            likes: 29,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-10',
+            title: 'TRIAL 10',
+            image: 'assets/trail 10.png',
+            tape: 'tape-orange',
+            pin: 'pin-yellow',
+            tilt: 2,
+            likes: 50,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-11',
+            title: 'TRIAL 11',
+            image: 'assets/trail 11.png',
+            tape: 'tape-yellow',
+            pin: 'pin-yellow',
+            tilt: -4,
             likes: 15,
             likedByUser: false,
             comments: []
         },
-        { 
-            id: 'mem-7', 
-            title: 'PACIFIC POWER', 
-            image: 'assets/pacific_power.png', 
-            tape: 'tape-purple', 
-            pin: 'pin-yellow', 
-            tilt: 6,
-            likes: 56,
+        {
+            id: 'mem-12',
+            title: 'TRIAL 12',
+            image: 'assets/trail 12.png',
+            tape: 'tape-pink',
+            pin: 'pin-yellow',
+            tilt: 3,
+            likes: 22,
             likedByUser: false,
-            comments: [
-                { name: 'Liam', text: 'The textures on those crashing waves are unreal!', date: 'Jun 15' },
-                { name: 'Sarah', text: 'I bought this one and it looks even better on my wall.', date: 'Jun 19' }
-            ]
+            comments: []
+        },
+        {
+            id: 'mem-13',
+            title: 'TRIAL 13',
+            image: 'assets/trail 13.png',
+            tape: 'tape-blue',
+            pin: 'pin-yellow',
+            tilt: -1,
+            likes: 41,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-14',
+            title: 'TRIAL 14',
+            image: 'assets/trail 14.png',
+            tape: 'tape-purple',
+            pin: 'pin-yellow',
+            tilt: 5,
+            likes: 33,
+            likedByUser: false,
+            comments: []
+        },
+        {
+            id: 'mem-15',
+            title: 'TRIAL 15',
+            image: 'assets/trail 15.png',
+            tape: 'tape-orange',
+            pin: 'pin-yellow',
+            tilt: -3,
+            likes: 27,
+            likedByUser: false,
+            comments: []
         }
     ];
 
@@ -128,6 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
+                // Reset to new collections if it contains the old data (checking if any image doesn't include 'traial' or 'trail' or if length changed)
+                const hasOldData = parsed.some(mem => mem.image && !mem.image.includes('traial') && !mem.image.includes('trail')) || parsed.length !== defaultMemories.length;
+                if (hasOldData) {
+                    memories = [...defaultMemories];
+                    saveMemories();
+                    return;
+                }
+
                 // Sanitize loaded items to ensure all required fields are present
                 memories = parsed.map(mem => {
                     const defaultSeed = defaultMemories.find(d => d.id === mem.id);
@@ -147,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (e) {
                 console.error("Failed to parse stored memories, resetting.", e);
                 memories = [...defaultMemories];
+                saveMemories();
             }
         } else {
             memories = [...defaultMemories];
@@ -172,74 +253,36 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderBoard() {
         if (!boardGrid) return;
 
-        // Clear existing polaroid elements (leave the Add card)
+        // Clear existing elements
         const addCard = document.getElementById('add-card-dashed');
-        const polaroids = boardGrid.querySelectorAll('.board-polaroid');
-        polaroids.forEach(p => p.remove());
+        const items = boardGrid.querySelectorAll('.board-polaroid, .board-taped-image');
+        items.forEach(p => p.remove());
+
+        // Center dynamically if there are 2 or fewer items
+        if (memories.length <= 2) {
+            boardGrid.classList.add('two-items');
+        } else {
+            boardGrid.classList.remove('two-items');
+        }
 
         memories.forEach(mem => {
             const card = document.createElement('div');
-            card.className = `board-polaroid mode-${currentMode}`;
+            card.className = 'board-taped-image';
             card.id = mem.id;
             card.style.transform = `rotate(${mem.tilt}deg)`;
 
             const tapeColorClass = mem.tape || 'tape-pink';
-            const pinColorClass = mem.pin || 'pin-blue';
-
-            // Build dynamic delete buttons based on mode (pins are removed)
-            let pinButtonHTML = '';
-            if (currentMode === 'owner') {
-                pinButtonHTML = `
-                    <button class="polaroid-delete-btn" aria-label="Delete creation" data-id="${mem.id}">&times;</button>
-                `;
-            }
-
-            let visitorFooterHTML = '';
-            if (currentMode === 'visitor') {
-                visitorFooterHTML = `
-                    <div class="polaroid-visitor-actions">
-                        <button class="card-action-btn like-btn ${mem.likedByUser ? 'liked' : ''}" data-id="${mem.id}" aria-label="Like creation">
-                            <span class="heart-icon">${mem.likedByUser ? '❤️' : '♡'}</span>
-                            <span class="count">${mem.likes !== undefined && mem.likes !== null ? mem.likes : 0}</span>
-                        </button>
-                    </div>
-                `;
-            }
 
             card.innerHTML = `
                 <div class="tape ${tapeColorClass} tape-top"></div>
-                ${pinButtonHTML}
-                <div class="polaroid-inner">
-                    <div class="polaroid-image-wrapper">
-                        <img src="${mem.image}" alt="${mem.title}" class="polaroid-img" loading="lazy">
-                    </div>
-                    <div class="polaroid-caption">${mem.title}</div>
-                    ${visitorFooterHTML}
-                </div>
+                <img src="${mem.image}" alt="${mem.title}" class="taped-img" loading="lazy">
             `;
 
             // Insert card before the "Add to Board" card
-            boardGrid.insertBefore(card, addCard);
-
-            // Click interaction
-            if (currentMode === 'visitor') {
-                // Heart action listener
-                const likeBtn = card.querySelector('.like-btn');
-                if (likeBtn) {
-                    likeBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        toggleLike(mem.id);
-                    });
-                }
+            if (addCard) {
+                boardGrid.insertBefore(card, addCard);
             } else {
-                // Delete event handler (Owner Mode only)
-                const deleteBtn = card.querySelector('.polaroid-delete-btn');
-                if (deleteBtn) {
-                    deleteBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        deleteMemory(mem.id);
-                    });
-                }
+                boardGrid.appendChild(card);
             }
         });
     }
@@ -254,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 mem.likes += 1;
                 mem.likedByUser = true;
-                
+
                 // Add pop scale animation on click
                 const card = document.getElementById(id);
                 if (card) {
@@ -274,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.getElementById(id);
         if (card) {
             card.classList.add('deleting');
-            
+
             // Wait for shrink animation to complete
             setTimeout(() => {
                 memories = memories.filter(m => m.id !== id);
@@ -299,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset input values and base64 cache
             if (addMemoryForm) addMemoryForm.reset();
             loadedImageBase64 = '';
-            
+
             // Reset button text & state
             const submitBtn = addModal.querySelector('.modal-submit');
             if (submitBtn) {
@@ -307,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.style.opacity = '1';
                 submitBtn.innerHTML = '<span>Pin Creation</span>';
             }
-            
+
             resetModalOptions();
         });
     }
@@ -352,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedPinColor = 'pin-blue';
         tapeColorOptions.forEach(o => o.classList.remove('active'));
         pinColorOptions.forEach(o => o.classList.remove('active'));
-        
+
         // Select defaults
         const defaultTape = document.querySelector('.color-option[data-type="tape"][data-color="tape-pink"]');
         const defaultPin = document.querySelector('.color-option[data-type="pin"][data-color="pin-blue"]');
@@ -377,9 +420,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const reader = new FileReader();
-                reader.onload = function(evt) {
+                reader.onload = function (evt) {
                     const img = new Image();
-                    img.onload = function() {
+                    img.onload = function () {
                         const canvas = document.createElement('canvas');
                         let width = img.width;
                         let height = img.height;
@@ -400,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         canvas.width = width;
                         canvas.height = height;
-                        
+
                         const ctx = canvas.getContext('2d');
                         ctx.drawImage(img, 0, 0, width, height);
 
@@ -425,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addMemoryForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const captionInput = document.getElementById('memory-caption').value.trim();
-            
+
             if (!captionInput) {
                 alert("Please write a description!");
                 return;
@@ -441,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'assets/neon_tokyo.png',
                 'assets/modern_geometry.png'
             ];
-            
+
             const randomFallback = fallbacks[Math.floor(Math.random() * fallbacks.length)];
             const imageToUse = loadedImageBase64 || randomFallback;
 
@@ -459,11 +502,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             memories.push(newMemory);
             saveMemories();
-            
+
             // Render and close modal
             renderBoard();
             addModal.classList.remove('show');
-            
+
             // Clear inputs
             loadedImageBase64 = '';
             addMemoryForm.reset();
