@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-1',
             title: 'SUMMER PICNIC \'24',
-            image: 'assets/summer_gear.png',
+            image: '../assets/summer_gear.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
             tilt: 4,
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-2',
             title: 'ALPINE MORNINGS',
-            image: 'assets/alpine_mornings.png',
+            image: '../assets/alpine_mornings.png',
             tape: 'tape-blue',
             pin: 'pin-yellow',
             tilt: -3,
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-3',
             title: 'NEON TOKYO',
-            image: 'assets/neon_tokyo.png',
+            image: '../assets/neon_tokyo.png',
             tape: 'tape-purple',
             pin: 'pin-yellow',
             tilt: 5,
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-4',
             title: 'MODERN GEOMETRY',
-            image: 'assets/modern_geometry.png',
+            image: '../assets/modern_geometry.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
             tilt: -5,
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-5',
             title: 'LIBRARY SOLITUDE',
-            image: 'assets/library_solitude.png',
+            image: '../assets/library_solitude.png',
             tape: 'tape-blue',
             pin: 'pin-yellow',
             tilt: 3,
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-6',
             title: 'MACRO MORNING',
-            image: 'assets/macro_morning.png',
+            image: '../assets/macro_morning.png',
             tape: 'tape-pink',
             pin: 'pin-yellow',
             tilt: -2,
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-8',
             title: 'TRIAL 8',
-            image: 'assets/trail 8.png',
+            image: '../assets/trail 8.png',
             tape: 'tape-blue',
             pin: 'pin-yellow',
             tilt: 4,
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-9',
             title: 'TRIAL 9',
-            image: 'assets/trail 9.png',
+            image: '../assets/trail 9.png',
             tape: 'tape-purple',
             pin: 'pin-yellow',
             tilt: -3,
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-10',
             title: 'TRIAL 10',
-            image: 'assets/trail 10.png',
+            image: '../assets/trail 10.png',
             tape: 'tape-orange',
             pin: 'pin-yellow',
             tilt: 2,
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-11',
             title: 'TRIAL 11',
-            image: 'assets/trail 11.png',
+            image: '../assets/trail 11.png',
             tape: 'tape-yellow',
             pin: 'pin-yellow',
             tilt: -4,
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mem-7',
             title: 'PACIFIC POWER',
-            image: 'assets/pacific_power.png',
+            image: '../assets/pacific_power.png',
             tape: 'tape-purple',
             pin: 'pin-yellow',
             tilt: 6,
@@ -167,9 +167,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
-                // Reset to new collections if it contains the old data (checking if any image doesn't include 'traial' or 'trail' or if length changed)
-                const hasOldData = parsed.some(mem => mem.image && !mem.image.includes('traial') && !mem.image.includes('trail')) || parsed.length !== defaultMemories.length;
-                if (hasOldData) {
+
+                // Reset if stored data has a different number of items
+                if (parsed.length !== defaultMemories.length) {
+                    memories = [...defaultMemories];
+                    saveMemories();
+                    return;
+                }
+
+                // Reset if any stored image uses the old broken path (missing ../)
+                const hasStaleAssetPaths = parsed.some(mem =>
+                    mem.image && mem.image.startsWith('assets/')
+                );
+                if (hasStaleAssetPaths) {
                     memories = [...defaultMemories];
                     saveMemories();
                     return;
